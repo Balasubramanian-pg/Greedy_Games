@@ -13,7 +13,7 @@ This repository contains my submissions for the Greedy Games Assessments, featur
 6. **[Task 6](https://github.com/Balasubramanian-pg/Greedy_Games/tree/main/Task%206)**  
 
 ## **Findings**  
-For a detailed breakdown of my observations and improvements, check the **[Findings Report](https://github.com/Balasubramanian-pg/Greedy_Games/blob/main/Findings.pdf)**.  
+For a detailed breakdown of my observations and improvements, check the **[Findings Report](https://github.com/Balasubramanian-pg/Greedy_Games/blob/main/Main%20Takeaways.pdf))**.  
 
 ### Documentation Structure
 
