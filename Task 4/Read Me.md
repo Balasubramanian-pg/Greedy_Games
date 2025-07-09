@@ -11,27 +11,7 @@ Extract **key insights** from voting patterns to:
 4. **Detect regional biases** (Do users from specific countries vote differently?).  
 5. **Analyze temporal trends** (Are votes increasing/decreasing over time?).  
 
-### **Approach (Python Analysis Plan)**  
-1. **Load & Clean Data**  
-   - Check for missing values, duplicates, and standardize columns.  
-
-2. **Basic Metrics**  
-   - **Vote distribution**: % of upvotes vs. downvotes.  
-   - **Top offers/apps** by vote count and sentiment ratio.  
-
-3. **Advanced Insights**  
-   - **Sentiment by country**: Compare `country_code` voting patterns.  
-   - **Temporal analysis**: Votes per day/month to detect trends.  
-   - **User engagement**: Most active voters (users with most votes).  
-
-4. **Visualizations**  
-   - Pie chart (UP vs. DOWN votes).  
-   - Bar plots (top offers by sentiment).  
-   - Heatmap (votes by country/time).  
-
-**Expected Output**: Actionable insights to improve offers, target high-engagement regions, and optimize reward strategies.  
-
-### **Your Approach Explained Concisely**  
+### **Approach Taken**  
 
 #### **1. Data Loading & Cleaning**  
 - Imported datasets (`4_voting_data.csv`) and checked for missing values/duplicates.  
