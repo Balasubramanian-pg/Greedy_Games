@@ -23,3 +23,25 @@ Calculate:
 - **RPU for Referred Users** = (Total Revenue from Referrals) / (Number of Referred Users)  
 - **RPU for Non-Referred Users** = (Total Revenue from Non-Referrals) / (Number of Non-Referred Users)  
 - Compare the two RPUs to determine if referred users generate more revenue.  
+
+### **Approach Taken:**
+
+1. **Data Loading & Cleaning**  
+   - Imported datasets, removed duplicates, and standardized column names.
+
+2. **User Classification**  
+   - Split users into **referral** (40,836) and **non-referral** (25,879) groups.  
+   - Merged revenue data with user classification.
+
+3. **Revenue Analysis**  
+   - Calculated **RPU**: Referral ($0.2015) vs. Non-Referral ($0.1880).  
+   - Found referral users generate **7.2% higher RPU** (skewed by high-value users).  
+   - Median revenue was lower for referrals, indicating uneven distribution.
+
+4. **Key Insight**  
+   - Referral programs attract **a few high-spending users**, lifting average revenue.  
+
+5. **Recommendation**  
+   - **Scale referrals** (cost-effective) and **optimize for high-value users**.  
+
+**Bottom Line:** Referral users are 7.2% more valuable on average. 
