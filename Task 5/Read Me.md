@@ -4,18 +4,18 @@ We need to compare the **Revenue Per User (RPU)** between two groups of users in
 - **Non-referred users**: Users who joined organically (without referrals).  
 
 #### **Data Available:**  
-1. **`5_1_bharat_cash_overall_daily_login.csv`**  
+1. **`6_1_bharat_cash_overall_daily_login.csv`**  
    - Contains daily active users (DAU) with `adv_id` (user ID), `app_id`, and `day`.  
    - Helps identify **total users** who logged in.  
 
-2. **`5_2_from_referral_bharatcash.csv`**  
+2. **`6_2_from_referral_bharatcash.csv`**  
    - Contains users who joined via referral (`referre_adv_id` and `created_at`).  
    - Helps identify **referred users**.  
 
-3. **`5_3_rev_from_referral_bharatcash.csv`**  
+3. **`6_3_rev_from_referral_bharatcash.csv`**  
    - Contains revenue generated **only by referred users** (`adv_id` and `revenue_in_usd`).  
 
-4. **`5_4_rev_overall_bharatcash.csv`**  
+4. **`6_4_rev_overall_bharatcash.csv`**  
    - Contains **total revenue** from all users (`adv_id` and `revenue_in_usd`).  
 
 ### **Objective:**  
