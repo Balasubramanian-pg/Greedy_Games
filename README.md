@@ -1,2 +1,11 @@
 # Greedy_Games
-Assessment for GreedyGames 
+
+There are 6 assessments:
+Task 1
+Task 2
+Task 3
+Task 4
+Task 5
+Task 6
+Findings
+
