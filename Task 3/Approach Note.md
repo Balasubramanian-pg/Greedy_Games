@@ -1,5 +1,3 @@
----
-
 ### Getting Started: Setting Up The environment
 
 Firstly I **imported some essential Python libraries** like `pandas` (for handling data tables), `numpy` (for number crunching), and `datetime` (for working with dates and times). I also grabbed `matplotlib` and `seaborn` for later, just in case I needed to visualize anything.
