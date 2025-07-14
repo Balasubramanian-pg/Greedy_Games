@@ -20,7 +20,7 @@ Before jumping into heavy analysis, I did some basic reconnaissance.
 
 ### Cleaning Up and Organizing Data
 
-I noticed something important: the **'created_at' column wasn't in a proper date/time format**. That's like having a clock stuck at the wrong time! So, I **converted it to the correct datetime format** using `pd.to_datetime()`, making sure it could handle any weird mixed formats.
+I noticed something important: the **'created_at' column wasn't in a proper date/time format**. So, I **converted it to the correct datetime format** using `pd.to_datetime()`, making sure it could handle any weird mixed formats.
 
 Then, I did a quick check on some key categories:
 * I looked at the **`transaction_type`** to see if most transactions were debits or credits.
