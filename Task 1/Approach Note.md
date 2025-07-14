@@ -15,4 +15,3 @@ Afterward, I **checked the count of transactions after the first one**. I also *
 Finally, I **printed a summary of all my findings** and also **looked into additional facts** that supported my analysis needs.
 
 ---
-Is there anything specific you'd like to delve deeper into from this analysis?
