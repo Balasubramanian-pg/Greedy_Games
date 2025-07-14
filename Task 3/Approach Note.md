@@ -14,7 +14,7 @@ Before jumping into heavy analysis, I did some basic reconnaissance.
 * I **listed all the column names** so I knew exactly what kind of data was available.
 * I **peeked at the first few rows** using `df.head()` to get a quick feel for the data's structure and content.
 * To understand the **data types** (like numbers, text, or dates) and get some non-null counts, I ran `df.info()`. This is super helpful for spotting potential issues early on.
-* I also asked for **basic statistics** like averages, minimums, maximums, and standard deviations for numerical columns using `df.describe()`. This gave me a quick sense of the data's distribution.
+* I also checked for **basic statistics** like averages, minimums, maximums, and standard deviations for numerical columns using `df.describe()`. This gave me a quick sense of the data's distribution.
 
 ---
 
