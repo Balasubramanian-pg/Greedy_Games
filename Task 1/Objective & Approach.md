@@ -22,7 +22,6 @@ Analyze user behavior **after their first transaction** to answer:
    - **Example**: If a user’s subsequent transactions were `50, 100, 200 INR`, the average is `(50+100+200)/3 = 116.67 INR`.  
 
 ### **Approach Taken**
----
 
 #### **1. Data Preparation & Exploration**
 - **Loaded** transaction data (`1_txn_data.csv`) with **65,936 rows** and **13 columns**.
@@ -34,7 +33,6 @@ Analyze user behavior **after their first transaction** to answer:
   - Converted `created_at` to datetime.  
   - Sorted by `adv_id` and `created_at` to ensure chronological order.  
 
----
 
 #### **2. Key Questions Addressed**
 ##### **Q1: Average Time to Second Transaction**  
@@ -64,7 +62,6 @@ Analyze user behavior **after their first transaction** to answer:
 - **Result**:  
   - **45.17 INR** average post-first transaction.  
 
----
 
 #### **3. Advanced Insights**  
 - **User Segmentation**:  
@@ -78,7 +75,6 @@ Analyze user behavior **after their first transaction** to answer:
   - **Low retention (14%)** suggests poor engagement or potential fraud.  
   - **Large transaction spreads** (min: 5 INR, max: 500 INR) may indicate outliers.  
 
----
 
 #### **4. Technical Implementation**  
 - **Critical Steps**:  
@@ -95,7 +91,6 @@ Analyze user behavior **after their first transaction** to answer:
      after_first_txns['amount_inr'].mean()
      ```  
 
----
 
 #### **5. Key Findings**  
 | Metric                                | Value             |  
@@ -113,7 +108,6 @@ Analyze user behavior **after their first transaction** to answer:
 - Investigate users with **>500 INR transactions** (potential fraud).  
 - Improve engagement for **one-time users** (e.g., incentives for second transaction).  
 
---- 
 
 **Final Insight**:  
 > *"While most users (70%) transact only once, the 14% who return do so quickly (1.5 days) and spend moderately (45 INR on average). Focus on converting one-time users and monitoring rapid high-value transactions."*  
