@@ -13,5 +13,3 @@ A key part of my analysis was to **compute the day difference between the first 
 Afterward, I **checked the count of transactions after the first one**. I also **converted 'paise' to 'INR'** by dividing the relevant column by 100.
 
 Finally, I **printed a summary of all my findings** and also **looked into additional facts** that supported my analysis needs.
-
----
