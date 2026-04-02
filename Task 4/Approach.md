@@ -5,14 +5,12 @@ Then, I did a **quick check of the data's shape** (rows and columns) and **liste
 
 To ensure data quality, I used `.info()` to **check data types** and identify any missing values. Importantly, I noticed the `created_at` column needed to be converted to a proper datetime format, so I used `pd.to_datetime()` for that. Lastly, `.describe()` provided **basic descriptive statistics** for numerical columns, like average vote count.
 
-***
 
 ## 2. Overall Sentiment Analysis 
 My first big question was, "Are people generally happy or unhappy?"
 * I **counted the occurrences of 'UP' and 'DOWN' states** in the `state` column using `.value_counts()`. This showed me the raw numbers of upvotes and downvotes.
 * From these counts, I calculated the **overall upvote and downvote percentages**, as well as the **sentiment ratio** (upvotes divided by downvotes). This gives a clear picture of the overall user sentiment towards offers.
 
-***
 
 ## 3. Geographic Insights (Country-wise) 
 I wanted to see if sentiment varied by location.
@@ -20,7 +18,6 @@ I wanted to see if sentiment varied by location.
 * I **calculated the `upvote_rate`, `downvote_rate`, and `sentiment_ratio` for each country**.
 * Finally, I **displayed the top 10 countries by total vote volume** using `nlargest()`. This highlighted regions with the most active voting and their sentiment.
 
-***
 
 ## 4. Offer Performance Analysis 
 Next, I focused on the offers themselves. Which ones are loved, and which aren't?
@@ -28,14 +25,12 @@ Next, I focused on the offers themselves. Which ones are loved, and which aren't
 * I then computed the **`upvote_rate` and `engagement_score`** (total votes per unique user) for each offer.
 * I identified the **top 10 best and worst-performing offers** based on their `upvote_rate` using `nlargest()` and `nsmallest()`. This helps understand which offers are resonating with users and which are struggling.
 
-***
 
 ## 5. App-Level Sentiment 
 I also looked at how specific applications performed.
 * I **grouped the data by `app_id`** using `groupby()` and calculated **total votes, upvotes, downvotes, unique users, and unique offers** for each app.
 * I also computed the **`upvote_rate` for each app**. This shows which apps are generally hosting content that users like.
 
-***
 
 ## 6. User Behavior Patterns (Who's Voting What?) 
 Understanding user types is crucial.
@@ -44,7 +39,6 @@ Understanding user types is crucial.
 * Based on their `upvote_rate`, I **categorized each user into 'Positive', 'Negative', or 'Neutral'** using a custom function. This helps segment the user base by their general voting tendency.
 * I then showed the **distribution of these user sentiment types** to see the overall user satisfaction landscape.
 
-***
 
 ## 7. Time-Based Trends 
 When are users most active, and does sentiment change over time?
@@ -53,7 +47,6 @@ When are users most active, and does sentiment change over time?
 * I looked at **weekly voting patterns** by grouping by `day_of_week` to find the most active days and their average `upvote_rate`.
 * I also examined **hourly voting patterns** by grouping by `hour` to identify peak voting times. This information can be useful for scheduling content.
 
-***
 
 ## 8. Deep Dive into Engagement & Quality 
 I went further to understand engagement depth and offer quality.
@@ -64,7 +57,6 @@ I went further to understand engagement depth and offer quality.
 * I also calculated **voting velocity** (time between votes) for each user and checked how it differed between upvotes and downvotes. This could indicate rapid, potentially automated, voting behavior.
 * Finally, I looked for **monthly voting trends** to identify any seasonal changes in activity or sentiment.
 
-***
 
 ## 9. Key Insights & Recommendations 
 I summarized my main findings, such as the overall positive sentiment, the most engaged country, and the best-performing offers.
