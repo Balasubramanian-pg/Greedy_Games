@@ -4,7 +4,6 @@ Firstly I **imported some essential Python libraries** like `pandas` (for handli
 
 Then, I **loaded the wallet transaction data** from the `3_wallet_data.csv` file into what I call a **DataFrame** – basically, a big table where I can easily organize and manipulate the information.
 
----
 
 ### What Am I Looking At?
 
@@ -16,7 +15,6 @@ Before jumping into heavy analysis, I did some basic reconnaissance.
 * To understand the **data types** (like numbers, text, or dates) and get some non-null counts, I ran `df.info()`. This is super helpful for spotting potential issues early on.
 * I also checked for **basic statistics** like averages, minimums, maximums, and standard deviations for numerical columns using `df.describe()`. This gave me a quick sense of the data's distribution.
 
----
 
 ### Cleaning Up and Organizing Data
 
@@ -29,7 +27,6 @@ Then, I did a quick check on some key categories:
 
 To make sure my future analysis was solid, I **sorted all the data**. I first grouped transactions by `adv_id` (which I figured was a unique user ID) and then by `created_at`. This way, all transactions for a single user were together and in chronological order – much easier to follow their financial story!
 
----
 
 ### Checking User-Level Profiles
 
@@ -45,7 +42,6 @@ I wanted to understand each user's behavior, not just individual transactions.
     * How many **unique currencies** and **source entity types** they used.
 * After generating this summary, the column names were a bit clunky, so I **flattened them out** to make them easier to read.
 
----
 
 ### Calculating Key Behavioral Metrics
 
@@ -58,7 +54,6 @@ With the user summaries in hand, I started calculating some crucial metrics that
 * I also calculated the **total amount of DEBITs and CREDITs** separately for each user.
 * Then, I computed the **net balance** (credits minus debits) and the **amount imbalance** (the absolute difference between total credits and debits). A large imbalance could mean unusual activity.
 
----
 
 ### Anomaly Detection
 
@@ -68,7 +63,6 @@ This is where the detective work really intensified. I wanted to find users whos
 * **Composite Anomaly Score**: To get a broader picture, I created a **composite anomaly score** for each user. This score increased by 1 for every outlier flag they received. The higher the score, the more "unusual" their behavior seemed across multiple metrics.
 * I then identified **"high-risk users"** as those with an anomaly score of 2 or more.
 
----
 
 ### More Fraud Indicators and Statistical Checks
 
@@ -78,7 +72,6 @@ I wasn't done yet! I looked for other specific patterns:
 * **Only debits or only credits**: This is a big one! Users who *only* send money or *only* receive money without a mix might be suspicious.
 * **Z-Scores**: I calculated **Z-scores** for `total_amount`, `txn_frequency`, and `avg_transaction`. A Z-score tells me how many standard deviations away from the average a user's metric is. Users with Z-scores greater than 3 (meaning they're extremely far from the average) were flagged as "extreme users."
 
----
 
 ### Uncovering Unusual Patterns
 
@@ -90,7 +83,6 @@ Sometimes, the *when* of a transaction can be as important as the *what*.
     * **Activity concentrated in very few hours**: Users who only transact during a very narrow window each day.
 * I merged this timing data back into my main user statistics.
 
----
 
 ### Risk Scoring
 
@@ -102,5 +94,3 @@ Finally, I pulled all these threads together to create a **unified fraud risk sc
 * And, of course, I highlighted the **top 10 most suspicious users** based on their fraud risk score, showing their key metrics.
 * I also provided a **summary of how many users exhibited each specific fraud indicator** (e.g., how many had only debit transactions).
 * Finally, I did a **detailed analysis of the high-risk users** to understand their average behavior.
-
----
