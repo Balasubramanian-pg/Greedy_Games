@@ -14,7 +14,6 @@ There is a possibility of **suspicious activity** if a user's **click location d
 **Identify users whose click locations (country) do not match their signup locations.**  
 This helps detect potential fraud or misuse of the platform.
 
----
 
 ### **Data Provided:**
 1. **`7_1_clicks_country.csv`**  
@@ -36,10 +35,8 @@ This helps detect potential fraud or misuse of the platform.
 5. **Country Code Reference (`country.json`)**  
    - A JSON file mapping country codes (e.g., "US") to full country names (e.g., "United States").
 
----
 ### **Approach Taken**  
 
----
 
 #### **1. Data Preparation & Merging**  
 - **Loaded 4 datasets**:  
@@ -51,7 +48,6 @@ This helps detect potential fraud or misuse of the platform.
   - `click_id` → `country_code` (click location)  
   - `adv_id` → `country_code` (signup location)  
 
----
 
 #### **2. Core Analysis: Location Mismatches**  
 - **Flagged discrepancies** where:  
@@ -60,7 +56,6 @@ This helps detect potential fraud or misuse of the platform.
   - **100% of users (37,704)** had mismatches (*likely data issue*).  
   - **17.7% (6,690 users)** were high-risk (`HIGH/CRITICAL` fraud score).  
 
----
 
 #### **3. Fraud Scoring System**  
 Each user scored **0-100** based on:  
@@ -73,7 +68,6 @@ Each user scored **0-100** based on:
 - `CRITICAL` (≥70) – 2,705 users  
 - `HIGH` (50-69) – 3,985 users  
 
----
 
 #### **4. Top Suspicious Patterns**  
 | Signup → Click Country       | Users | Clicks  |  
@@ -85,7 +79,6 @@ Each user scored **0-100** based on:
 - Users with **3740 clicks** from **7 countries** in **1 day**.  
 - **12+ countries** accessed by single users.  
 
----
 
 #### **5. Technical Steps**  
 1. **Merged datasets**:  
@@ -98,7 +91,6 @@ Each user scored **0-100** based on:
    fraud_score = (discrepancy_rate * 40) + (num_countries * 10) + ...
    ```  
 
----
 
 #### **6. Key Results**  
 | Metric                          | Value          |  
@@ -108,7 +100,6 @@ Each user scored **0-100** based on:
 | High-risk users                 | 6,690 (17.7%)  |  
 | Top fraud country               | India (63%)    |  
 
----
 
 #### **7. Why It Matters**  
 - **100% mismatch rate** suggests **data quality issues** (e.g., IP masking).  
@@ -121,7 +112,6 @@ Each user scored **0-100** based on:
 2. Investigate `CRITICAL` users for **account takeovers**.  
 3. Block **multi-country click bursts** (>50/day).  
 
---- 
 
 **Final Insight**:  
 > *"While all users showed location mismatches (likely due to data errors), 17.7% were high-risk with patterns of fraud (VPNs, bots). Prioritize investigating India-based users with 1000+ clicks from multiple countries."*  
