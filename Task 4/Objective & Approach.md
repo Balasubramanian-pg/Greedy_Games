@@ -40,6 +40,5 @@ Extract **key insights** from voting patterns to:
 **Bottom Line**:  
 Your analysis reveals **strong positive sentiment**, with opportunities to optimize underperforming offers and regions. The referral program’s high engagement (95.6% upvotes) suggests it’s working well.  
 
----  
 **Key Insight**:  
 > *"Referral-driven users are highly satisfied (95.6% upvotes), but a few poorly rated offers (D-grade) need improvement to boost overall revenue."*  
