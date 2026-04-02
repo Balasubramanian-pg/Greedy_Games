@@ -8,7 +8,6 @@ After that, I focused on **data cleaning**:
 * I **removed duplicate rows** from all DataFrames using `.drop_duplicates(inplace=True)` because duplicate records can skew analysis results and lead to inflated counts.
 * I also **cleaned up column names** by removing any leading/trailing spaces using `.columns.str.strip()` to prevent potential merging issues or errors later on.
 
-***
 
 ## User Segmentation: Who's Who?
 
@@ -19,7 +18,6 @@ My primary goal was to compare **referral users** to **non-referral users**.
 * By subtracting the `referral_ids` from `all_ids`, I created `non_referral_ids`. This allowed me to clearly segment users based on whether they came through a referral or not.
 * I then **merged the overall revenue data with this user classification** using `pd.DataFrame()` and `df.merge()` to add a flag (`is_referral`) to each user's revenue record. This was crucial for comparing revenue between the two groups.
 
-***
 
 ## Revenue Analysis: Following the Money
 
@@ -35,7 +33,6 @@ With users clearly segmented, I dived into their revenue.
 * I defined a `revenue_class` function to categorize revenue values into these segments.
 * Then, I applied this function to both referral and non-referral revenue data and used `.value_counts()` to see the percentage of users falling into each segment. This helps visualize revenue concentration.
 
-***
 
 ## RPU Comparison: The Bottom Line
 
